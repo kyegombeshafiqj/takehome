@@ -1,1 +1,88 @@
+```cpp
+#include <iostream>
+using namespace std;
+
+class Rectangle
+{
+private:
+    double width;
+    double length;
+
+public:
+    // Function to set the width
+    void setWidth(double w)
+    {
+        width = w;
+    }
+
+    // Function to set the length
+    void setLength(double l)
+    {
+        length = l;
+    }
+
+    // Function to get the width
+    double getWidth()
+    {
+        return width;
+    }
+
+    // Function to get the length
+    double getLength()
+    {
+        return length;
+    }
+
+    // Function to calculate the area
+    double calculateArea()
+    {
+        return width * length;
+    }
+
+    // Function to calculate the perimeter
+    double calculatePerimeter()
+    {
+        return 2 * (width + length);
+    }
+};
+
+int main()
+{
+    // Create the first Rectangle object
+    Rectangle rectangle1;
+
+    // Set its dimensions
+    rectangle1.setWidth(4);
+    rectangle1.setLength(6);
+
+    // Display the dimensions
+    cout << "Rectangle 1" << endl;
+    cout << "Width: " << rectangle1.getWidth() << endl;
+    cout << "Length: " << rectangle1.getLength() << endl;
+
+    // Display the area and perimeter
+    cout << "Area: " << rectangle1.calculateArea() << endl;
+    cout << "Perimeter: " << rectangle1.calculatePerimeter() << endl;
+
+    cout << endl;
+
+    // Create a second Rectangle object
+    Rectangle rectangle2;
+
+    // Set its dimensions
+    rectangle2.setWidth(5);
+    rectangle2.setLength(10);
+
+    // Display the dimensions
+    cout << "Rectangle 2" << endl;
+    cout << "Width: " << rectangle2.getWidth() << endl;
+    cout << "Length: " << rectangle2.getLength() << endl;
+
+    // Display the area and perimeter
+    cout << "Area: " << rectangle2.calculateArea() << endl;
+    cout << "Perimeter: " << rectangle2.calculatePerimeter() << endl;
+
+    return 0;
+}
+```
 
