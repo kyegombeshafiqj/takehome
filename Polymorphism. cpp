@@ -1,0 +1,47 @@
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Payment {
+public:
+    virtual void pay(double amount) {
+        cout << "Processing a general payment." << endl;
+    }
+
+    virtual ~Payment() {}
+};
+
+// Derived class 1
+class CashPayment : public Payment {
+public:
+    void pay(double amount) override {
+        cout << "Paid UGX " << amount
+             << " using cash." << endl;
+    }
+};
+
+// Derived class 2
+class MobileMoney : public Payment {
+public:
+    void pay(double amount) override {
+        cout << "Paid UGX " << amount
+             << " using mobile money." << endl;
+    }
+};
+
+int main() {
+    CashPayment cash;
+    MobileMoney mobile;
+
+    // Base-class pointer
+    Payment* payment;
+
+    payment = &cash;
+    payment->pay(10000);
+
+    payment = &mobile;
+    payment->pay(20000);
+
+    return 0;
+}
